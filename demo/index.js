@@ -1,2 +1,2 @@
 // @demo
-// basic:12
+// basic:24 root:24

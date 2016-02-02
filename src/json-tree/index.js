@@ -97,8 +97,15 @@ export default class JsonTree extends React.Component {
     }
 
     render() {
-        let TreeContent = parseJson(this.props.json)
-        console.log(TreeContent)
+        let TreeContent
+
+        if (this.props.root) {
+            TreeContent = parseJson({
+                root: this.props.json
+            })
+        } else {
+            TreeContent = parseJson(this.props.json)
+        }
 
         return (
             <div className="_namespace">
@@ -111,5 +118,9 @@ export default class JsonTree extends React.Component {
 }
 
 JsonTree.defaultProps = {
-    json: {}
+    // @desc json对象
+    json: {},
+
+    // @desc 是否有默认root级
+    root: false
 }
