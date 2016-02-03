@@ -1,6 +1,6 @@
 {
   "name": "fit-json-tree",
-  "version": "0.0.22",
+  "version": "0.0.23",
   "description": "json-tree",
   "main": "lib/index.js",
   "scripts": {
