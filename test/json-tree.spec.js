@@ -23,6 +23,7 @@ describe('PC json-tree : ', function () {
             ]
         }
     }
+    // test basic
     it('Basic', function () {
         var container = document.createElement('div');
         render(<JsonTree json={jsonData}/>, container);
