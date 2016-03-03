@@ -1,12 +1,12 @@
 /**
  * Created by wangrui on 16/3/2.
  */
-import React from 'react';
-import {render,unmountComponentAtNode} from 'react-dom';
-import ReactTestUtils from 'react-addons-test-utils';
+import React from 'react'
+import { render, unmountComponentAtNode } from 'react-dom'
+import ReactTestUtils from 'react-addons-test-utils'
 import JsonTree from 'fit-json-tree'
 
-describe('PC json-tree : ', function () {
+describe('fit-json-tree : ', function () {
     const jsonData = {
         info: {
             name: 'Li Lei',
@@ -23,25 +23,21 @@ describe('PC json-tree : ', function () {
             ]
         }
     }
-    // test
-    it('Basic', function () {
-        var container = document.createElement('div');
-        render(<JsonTree json={jsonData}/>, container);
-        var tar = container.innerHTML.toString().indexOf("Li Lei");
-        expect(tar).not.toEqual(-1);
-        //expect(x.).toBe(true);
-        //console.log(container.innerHTML.toString());
-    });
 
-    it('Root', function () {
-        var container = document.createElement('div');
-        render(<JsonTree root={true} json={jsonData}/>, container);
-        var tar = container.innerHTML.toString().indexOf("Li Lei");
-        expect(tar).not.toEqual(-1);
-        //expect(x.).toBe(true);
-        //console.log(container.innerHTML.toString());
-    });
-});
+    it('basic render', function () {
+        let container = document.createElement('div')
+        render(<JsonTree json={jsonData}/>, container)
+        let tar = container.innerHTML.toString().indexOf("Li Lei")
+        expect(tar).not.toEqual(-1)
+    })
+
+    it('root render', function () {
+        let container = document.createElement('div')
+        render(<JsonTree root={true} json={jsonData}/>, container)
+        let tar = container.innerHTML.toString().indexOf("root")
+        expect(tar).not.toEqual(-1)
+    })
+})
 
 
 
