@@ -1,5 +1,6 @@
 import React from 'react'
 import { Tree, TreeNode } from 'fit-tree'
+import classNames from 'classnames'
 import './index.scss'
 
 const stringRender = (obj, key)=> {
@@ -97,18 +98,24 @@ export default class JsonTree extends React.Component {
     }
 
     render() {
+        const {className, root, json, ...others} = this.props
+        const classes = classNames({
+            '_namespace': true,
+            [className]: className
+        })
+
         let TreeContent
 
-        if (this.props.root) {
+        if (root) {
             TreeContent = parseJson({
-                root: this.props.json
+                root: json
             })
         } else {
-            TreeContent = parseJson(this.props.json)
+            TreeContent = parseJson(json)
         }
 
         return (
-            <div className="_namespace">
+            <div {...others} className={classes}>
                 <Tree>
                     {TreeContent}
                 </Tree>
