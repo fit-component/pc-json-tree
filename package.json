@@ -1,6 +1,6 @@
 {
   "name": "fit-json-tree",
-  "version": "0.0.63",
+  "version": "0.0.64",
   "description": "json-tree",
   "main": "lib/index.js",
   "scripts": {
@@ -18,7 +18,7 @@
   "dependencies": {
     "fit-style": "^1.1.49",
     "react": "^0.14.7",
-    "fit-tree": "^0.0.51",
+    "fit-tree": "^0.0.52",
     "classnames": "^2.2.1"
   }
 }
