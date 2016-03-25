@@ -1,6 +1,6 @@
 {
   "name": "fit-json-tree",
-  "version": "0.0.68",
+  "version": "0.0.69",
   "description": "json-tree",
   "main": "lib/index.js",
   "scripts": {
@@ -16,9 +16,9 @@
   "author": "tieba",
   "license": "ISC",
   "dependencies": {
-    "fit-style": "^1.1.51",
+    "fit-style": "^1.1.52",
     "react": "^0.14.7",
-    "fit-tree": "^0.0.56",
+    "fit-tree": "^0.0.57",
     "classnames": "^2.2.1"
   }
 }
